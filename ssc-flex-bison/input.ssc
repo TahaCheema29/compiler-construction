@@ -18,3 +18,26 @@ prints("e= b*d/(b-3)=");
 prints("The value of e =");
 
 printd(e);
+
+// Function to calculate factorial
+int factorial(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i = i + 1) {
+        result = result * i;
+    }
+    return result;
+}
+
+// Main program
+void main() {
+    int x = 5;
+    int fact = factorial(x);
+    
+    if (fact > 100) {
+        prints("Factorial is greater than 100");
+    } else {
+        prints("Factorial is less than or equal to 100");
+    }
+    
+    printd(fact);
+}

@@ -1,0 +1,109 @@
+// SSC Language Test File - Demonstrating Basic and Advanced Features
+
+// ===== Basic Features =====
+
+// Variable declarations and assignments
+int a = 5;
+double b = 3.5;
+
+// Basic arithmetic
+a = a + 1;
+b = b * 2;
+
+// Print statements
+prints("Basic Features Demo:");
+prints("-------------------");
+prints("a = ");
+printd(a);
+prints("b = ");
+printd(b);
+
+// If-else statement
+if (a > 5) {
+    prints("a is greater than 5");
+} else {
+    prints("a is less than or equal to 5");
+}
+
+// Explicitly calculate sum
+int s = 0;
+s = 1 + 2 + 3 + 4 + 5;
+prints("Sum of 1 to 5 = ");
+printd(s);
+
+// ===== Advanced Features =====
+
+prints("\nAdvanced Features Demo:");
+prints("---------------------");
+
+// Testing while loop
+int i = 1;
+int sum = 0;
+int limit = 10;
+
+prints("Sum of first 10 integers using while loop:");
+while (i <= limit) {
+    sum = sum + i;
+    i = i + 1;
+}
+printd(sum);
+
+// Function definition for factorial
+int factorial(int n) {
+    int result = 1;
+    for (int i = 1; i <= n; i = i + 1) {
+        result = result * i;
+    }
+    return result;
+}
+
+// Testing factorial function with different values
+prints("Factorial of 5:");
+int fact5 = factorial(5);
+printd(fact5);
+
+prints("Factorial of 6:");
+int fact6 = factorial(6);
+printd(fact6);
+
+// Testing other built-in functions
+prints("10th Fibonacci number:");
+int fib = fibonacci(10);
+printd(fib);
+
+prints("GCD of 48 and 18:");
+int gcdResult = gcd(48, 18);
+printd(gcdResult);
+
+prints("2 raised to the power 8:");
+double power = pow(2, 8);
+printd(power);
+
+prints("Maximum of 15 and 27:");
+int maximum = max(15, 27);
+printd(maximum);
+
+prints("Minimum of 15 and 27:");
+int minimum = min(15, 27);
+printd(minimum);
+
+// Testing complex conditional statements
+int x = 5;
+int y = 10;
+int z = 15;
+
+prints("\nTesting logical operators:");
+if (x < y && y < z) {
+    prints("x < y < z is true");
+}
+
+if (x > y || x < z) {
+    prints("x > y OR x < z is true");
+}
+
+// Testing nested loops and for loop
+prints("\nMultiplication table for 3:");
+for (int j = 1; j <= 5; j = j + 1) {
+    int product = 3 * j;
+    printd(product);
+} 

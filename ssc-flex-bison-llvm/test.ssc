@@ -1,0 +1,27 @@
+// Multiple function test
+
+// Define a function that adds two numbers
+double add(double param0, double param1) {
+    return param0 + param1;
+}
+
+// Define a function that doubles a number
+double double_it(double param0) {
+    return param0 * 2.0;
+}
+
+// Main code
+double a = 5.0;
+double b = 3.0;
+double c = 0.0;
+
+// Call the functions
+c = add(a, b);
+print "Result of add:";
+print c;
+
+c = double_it(c);
+print "Result after doubling:";
+print c;
+
+return 0; 

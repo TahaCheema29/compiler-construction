@@ -1,0 +1,84 @@
+# Compiled Object files
+*.o
+*.ko
+*.obj
+*.elf
+*.lo
+*.slo
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+ssc
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Flex & Bison generated files
+lex.yy.c
+ssc.tab.c
+ssc.tab.h
+
+# LLVM IR files
+*.ll
+*.bc
+
+# MLIR generated files
+*.mlir
+
+# Build directory
+build/
+Debug/
+Release/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs
+*.log
+log/
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+.\#*
+\#*\#
+.DS_Store
+
+# Project specific
+output.ll
+output_opt.ll
+ssc-flex-bison/ssc
+ssc-flex-bison-llvm/ssc 

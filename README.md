@@ -22,6 +22,37 @@ The project is organized into the following folders:
 
 ---
 
+## SSC Language Features
+
+The Simple Simple C (SSC) language implementation includes the following features:
+
+1. **Basic Data Types**:
+   - Integer and Double data types
+   - Variable declarations and assignments
+
+2. **Arithmetic Operations**:
+   - Addition, subtraction, multiplication, division
+
+3. **Control Flow Structures**:
+   - **If Statements**: Conditional execution with single branch
+   - **If-Else Statements**: Conditional execution with two branches
+   - **While Loops**: Condition-based iteration
+   - **For Loops**: Iteration with initialization, condition, and increment steps
+
+4. **Functions**:
+   - Function declarations with parameters
+   - Function calls with arguments
+   - Return statements
+   - Support for recursive function calls
+
+5. **Input/Output**:
+   - Print statements for displaying values
+   - String literals for messages
+
+All these features are implemented with LLVM IR generation in the `ssc-flex-bison-llvm` version, allowing for efficient code execution.
+
+---
+
 ## Requirements
 
 - **Ubuntu 22.04.4 LTS** or a similar Linux distribution.
@@ -72,6 +103,29 @@ make run
 ```
 
 This command will compile the SSC code and output the results.
+
+---
+
+### Testing Specific Language Features
+
+You can create test files to verify different language features:
+
+1. **Testing Control Structures**:
+   ```bash
+   ./ssc test_control.ssc
+   ```
+
+2. **Testing Functions**:
+   ```bash
+   ./ssc test_functions.ssc
+   ```
+
+3. **Testing Loops**:
+   ```bash
+   ./ssc test_loops.ssc
+   ```
+
+These commands will generate LLVM IR for the respective test files.
 
 ---
 
@@ -132,7 +186,7 @@ make help
 - **`ssc.l`**: The Flex file for the lexical analyzer.
 - **`ssc.y`**: The Bison file for the syntax and semantic analyzer.
 - **`IR.h`**: The header file containing all the C/C++ code, including LLVM IR generation.
-- **`input.ssc`**: A sample input file containing Simple Simple C code to test the compiler.
+- **`test.ssc`**: A test file containing SSC code to verify language features.
 - **`output.ll`**: The generated LLVM IR file.
 - **`output_opt.ll`**: The optimized LLVM IR file (generated using `opt`).
 
@@ -149,6 +203,8 @@ make help
 - Lexical analysis using **Flex**.
 - Syntax and semantic analysis using **Bison**.
 - **LLVM IR generation**: The compiler generates LLVM Intermediate Representation (IR) for the input code.
+- **Control flow structures**: Support for if-statements, if-else statements, while loops, and for loops.
+- **Function handling**: Support for function declarations, parameters, and function calls.
 - **Optimization**: The LLVM IR can be optimized using the `opt` tool.
 - **MLIR integration**: Advanced optimizations and transformations using MLIR (optional).
 
